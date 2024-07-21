@@ -1,0 +1,80 @@
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/outfit-v11-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/outfit-v11-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --spacing-500: 40px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+  --text-preset-1: calc(22 / 16 * 1rem);
+  --text-preset-2: calc(15 / 16 * 1rem);
+
+  --slate-300: hsla(212, 45%, 89%, 1);
+  --slate-900: hsla(218, 44%, 22%, 1);
+}
+
+html {
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+
+  font-family: Outfit, var(--font-sans-serif);
+  color: var(--slate-900);
+}
+
+body {
+  background-color: var(--slate-300);
+}
+
+.card-wrapper {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  width: 320px;
+  padding: var(--spacing-200);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+}
+
+.image-wrapper {
+  margin-block-end: var(--spacing-300);
+
+  & img {
+    width: 100%;
+  }
+}
+
+.card-heading {
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: var(--spacing-200);
+  line-height: 120%;
+  font-size: var(--text-preset-1);
+}
+
+.card-body-text {
+  text-align: center;
+  margin-block-end: var(--spacing-200);
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  font-size: var(--text-preset-2);
+}
